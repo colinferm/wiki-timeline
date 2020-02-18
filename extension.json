@@ -1,0 +1,47 @@
+{
+	"name": "Timeline",
+	"version": "1.1.0",
+	"author": [
+		"Colin Andrew Ferm"
+	],
+	"url": "https://github.com/colinferm/wiki-timeline",
+	"descriptionmsg": "timeline-desc",
+	"license-name": "BSD-3-Clause",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"Timeline": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"TimelineHook::init"
+		],
+		"SkinAfterBottomScripts": [
+			"TimelineLib::ursTimelineBottomScripts"
+		],
+		"BeforePageDisplay": [
+			"TimelineLib::ursTimelineHeaderScripts"
+		]
+	},
+	"APIModules": {
+		"timeline": "TimelineAPI"
+	},
+	"SpecialPages": {
+		"Timeline": "TimelineSpecialPage"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "Timeline"
+	},
+	"AutoloadClasses": {
+		"TimelineHook": "TimelineHook.php",
+		"TimelineLib": "TimelineLib.php",
+		"TimelineSpecialPage": "TimelineSpecialPage.php",
+		"TimelineAPI": "TimelineAPI.php"
+	},
+	"manifest_version": 1
+}

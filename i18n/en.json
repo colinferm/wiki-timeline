@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Colin Andrew Ferm"
+		]
+	},
+	"timeline": "URS Events Timeline",
+	"timeline-desc": "Adds <nowiki><timeline [planet=\"\"] [category=\"\"] [list=\"true|false\"] [height=\"400px\"] key=\"[true|false]\"/></nowiki> tag to parser to show timeline events.",
+	"timeline-summary": "Generates story ideas with relevant links to wiki content."
+}

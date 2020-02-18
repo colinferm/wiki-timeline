@@ -143,6 +143,7 @@
 }
 
 .timeline-event-bubble-body {
+    
 }
 
 .timeline-event-bubble-wiki {
@@ -328,4 +329,9 @@
 	left: 5%;
 	width: 90%;
 }
-#timeline-modal-close { float: right; }
+#timeline-modal-close { 
+    float: right; 
+    background-color: #666;
+    padding: 5px 10px;
+    margin: 0 0 0 5px;
+}

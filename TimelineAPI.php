@@ -32,7 +32,7 @@ class TimelineAPI extends ApiBase {
 
 		if (!$events) {
 			$db = wfGetDB(DB_SLAVE);
-			$results = ursFetchTimelineData($db, $catList, $planetsList);
+			$results = TimelineLib::ursFetchTimelineData($db, $catList, $planetsList);
 			$events = array();
 
 			global $wgParser, $wgUser, $wgTitle, $wgEnableParserCache;
@@ -76,7 +76,7 @@ class TimelineAPI extends ApiBase {
 		$result = $this->getResult();
 		$tags = array('events');
 
-                $result->setIndexedTagName_internal( $tags, 'event' );
+                $result->setIndexedTagName( $tags, 'event' );
 		$result->addValue(null, 'events', $events);
 
 		$action_end = microtime(true);
